@@ -19,6 +19,8 @@ public class UserApi {
     UserService userService;
     @Autowired
     TokenService tokenService;
+    
+    // curl -H "Content-Type: application/json" -X POST  --data '{"username":"zhangsan", "password":"123456"}' http://127.0.0.1:8888/api/login
     //登录
     @PostMapping("/login")
     public Object login(@RequestBody User user){
