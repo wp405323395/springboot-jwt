@@ -8,12 +8,12 @@ package com.pjb.springbootjjwt.entity;
  */
 public class User {
 	private String Id;
-    private String username;
+    private String name;
     private String password;
-    public User(String id, String username, String password) {
+    public User(String id, String name, String password) {
 		super();
 		Id = id;
-		this.username = username;
+		this.name = name;
 		this.password = password;
 	}
 	public User() {
@@ -24,11 +24,11 @@ public class User {
 	public void setId(String id) {
 		Id = id;
 	}
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getPassword() {
 		return password;
@@ -38,7 +38,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [Id=" + Id + ", username=" + username + ", password=" + password + "]";
+		return "User [Id=" + Id + ", name=" + name + ", password=" + password + "]";
 	}
 	
 

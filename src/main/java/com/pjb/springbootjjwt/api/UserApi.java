@@ -20,12 +20,12 @@ public class UserApi {
     @Autowired
     TokenService tokenService;
     
-    // curl -H "Content-Type: application/json" -X POST  --data '{"username":"zhangsan", "password":"123456"}' http://127.0.0.1:8888/api/login
+    // curl -H "Content-Type: application/json" -X POST  --data '{"name":"zhangsan", "password":"123456"}' http://127.0.0.1:8888/api/login
     //登录
     @PostMapping("/login")
     public Object login(@RequestBody User user){
         JSONObject jsonObject=new JSONObject();
-        User userForBase=userService.findByUsername(user);
+        User userForBase=userService.findByUsername(user.getName());
         if(userForBase==null){
             jsonObject.put("message","登录失败,用户不存在");
             return jsonObject;

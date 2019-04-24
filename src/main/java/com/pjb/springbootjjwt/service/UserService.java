@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     UserMapper userMapper;
-    public User findByUsername(User user){
-        return userMapper.findByUsername(user.getUsername());
+    public User findByUsername(String name){
+        return userMapper.findByUsername(name);
     }
     public User findUserById(String userId) {
         return userMapper.findUserById(userId);

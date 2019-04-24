@@ -4,11 +4,11 @@
     <select id="findByUsername" resultType="com.pjb.springbootjjwt.entity.User">
       SELECT * FROM user
       where
-      username=#{username}
+      name=#{name}
     </select>
     <select id="findUserById" resultType="com.pjb.springbootjjwt.entity.User">
         SELECT * FROM user
       where
-      id=#{Id}
+      id=#{id}
     </select>
 </mapper>
